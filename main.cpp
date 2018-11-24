@@ -10,6 +10,8 @@ int main()
 {
     sf::RenderWindow okno(sf::VideoMode(500, 500, 32), "Projekt Edukacja");
 
+    sf::Window::setMouseCursorVisible(false);
+
     while (okno.isOpen())
     {
         sf::Event zdarzenie;
