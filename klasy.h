@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 
-class Przycisk
+/*class Przycisk
 {
 protected:
     sf::Sprite obraz;
@@ -10,4 +10,19 @@ protected:
 public:
     Przycisk();
     ~Przycisk();
+};*/
+
+class Gracz
+{
+    ;
+};
+
+class Wskaznik
+{
+
+};
+
+class Wrog
+{
+    ;
 };
