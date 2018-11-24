@@ -16,7 +16,7 @@ int main()
                 okno.close();
         }
 
-        okno.clear(sf::Color::White);
+        okno.clear(sf::Color::Red);
 
         okno.display();
     }
