@@ -1,7 +1,10 @@
-#include <SFML/Graphics.hpp>
 #include <iostream>
 
+#include "klasy.h"
+
 using namespace std;
+
+
 
 int main()
 {
@@ -16,7 +19,7 @@ int main()
                 okno.close();
         }
 
-        okno.clear(sf::Color::Red);
+        okno.clear(sf::Color::White);
 
         okno.display();
     }
