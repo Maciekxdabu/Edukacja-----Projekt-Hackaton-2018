@@ -10,11 +10,9 @@ int main()
 {
     sf::RenderWindow okno(sf::VideoMode(500, 500, 32), "Projekt Edukacja");
 
-    sf::Window::setMouseCursorVisible(false);
+    okno.setMouseCursorVisible(false);
 
-    // cos
-
-    // hahahah
+    Wskaznik myszka("C:/Users/Bartek/Documents/GitHub/Edukacja-----Projekt-Hackaton-2018/img/celownik.png");
 
     while (okno.isOpen())
     {
@@ -25,7 +23,11 @@ int main()
                 okno.close();
         }
 
+        myszka.setposition(sf::Mouse::getPosition(okno).x,sf::Mouse::getPosition(okno).y);
+
         okno.clear(sf::Color::White);
+
+        okno.draw(myszka.getObraz());
 
         okno.display();
     }
