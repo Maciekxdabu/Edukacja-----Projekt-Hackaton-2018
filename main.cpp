@@ -12,6 +12,10 @@ int main()
 
     sf::Window::setMouseCursorVisible(false);
 
+    // cos
+
+    // hahahah
+
     while (okno.isOpen())
     {
         sf::Event zdarzenie;
