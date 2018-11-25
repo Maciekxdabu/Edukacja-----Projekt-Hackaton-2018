@@ -14,7 +14,8 @@ sf::Font czcionka;
 
 int main()
 {
-    sf::RenderWindow okno(sf::VideoMode(500, 500, 32), "Projekt Edukacja");
+    sf::RenderWindow okno(sf::VideoMode(800, 700, 32), "Projekt Edukacja");
+    okno.setPosition(sf::Vector2i(0,0));
 
     czcionka.loadFromFile("arial.ttf");
     okno.setMouseCursorVisible(false);

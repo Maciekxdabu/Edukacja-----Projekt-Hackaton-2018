@@ -3,6 +3,7 @@
 Gracz::Gracz(std::string a)
 {
     tekstura.loadFromFile(a);
+    tekstura.setSmooth(true);
     obraz.setTexture(tekstura);
 
     obraz.setPosition(250, 250);
@@ -53,13 +54,13 @@ void Gracz::porusz()
 
     if (obraz.getPosition().x < 25)
         obraz.setPosition(25, obraz.getPosition().y);
-    else if (obraz.getPosition().x > 525 - obraz.getTextureRect().width)
-        obraz.setPosition(525 - obraz.getTextureRect().width, obraz.getPosition().y);
+    else if (obraz.getPosition().x > 825 - obraz.getTextureRect().width)
+        obraz.setPosition(825 - obraz.getTextureRect().width, obraz.getPosition().y);
 
     if (obraz.getPosition().y < 25)
         obraz.setPosition(obraz.getPosition().x, 25);
-    else if (obraz.getPosition().y > 525 - obraz.getTextureRect().height)
-        obraz.setPosition(obraz.getPosition().x, 525 - obraz.getTextureRect().height);
+    else if (obraz.getPosition().y > 725 - obraz.getTextureRect().height)
+        obraz.setPosition(obraz.getPosition().x, 725 - obraz.getTextureRect().height);
 }
 
 void Gracz::obroc(float r)
