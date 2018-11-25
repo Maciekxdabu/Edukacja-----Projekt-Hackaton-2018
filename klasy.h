@@ -18,6 +18,7 @@ public:
     void drag();
     void porusz();
     void obroc(float);
+    void setPosition(float, float);
 };
 
 class Wskaznik

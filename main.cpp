@@ -79,6 +79,80 @@ int main()
         player.obroc( atan2(myszka.getObraz().getPosition().y - player.getObraz().getPosition().y,
                             myszka.getObraz().getPosition().x - player.getObraz().getPosition().x )/PI*180 + 90 );
 
+//A(237,203)
+        if (player.getObraz().getPosition().x > 212 && player.getObraz().getPosition().x < 217 && player.getObraz().getPosition().y > 203 && player.getObraz().getPosition().y < 248)
+            {player.setPosition(212,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 307 && player.getObraz().getPosition().x > 302 && player.getObraz().getPosition().y > 203 && player.getObraz().getPosition().y < 248)
+            {player.setPosition(307,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 237 && player.getObraz().getPosition().x < 282 && player.getObraz().getPosition().y > 178 && player.getObraz().getPosition().y < 208)
+            {player.setPosition(player.getObraz().getPosition().x,178);}
+        if (player.getObraz().getPosition().x > 237 && player.getObraz().getPosition().x < 282 && player.getObraz().getPosition().y < 273 && player.getObraz().getPosition().y > 268)
+            {player.setPosition(player.getObraz().getPosition().x,273);}
+//B(518,203)
+        if (player.getObraz().getPosition().x > 493 && player.getObraz().getPosition().x < 498 && player.getObraz().getPosition().y > 203 && player.getObraz().getPosition().y < 248)
+            {player.setPosition(493,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 588 && player.getObraz().getPosition().x > 583 && player.getObraz().getPosition().y > 203 && player.getObraz().getPosition().y < 248)
+            {player.setPosition(588,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 518 && player.getObraz().getPosition().x < 563 && player.getObraz().getPosition().y > 178 && player.getObraz().getPosition().y < 208)
+            {player.setPosition(player.getObraz().getPosition().x,178);}
+        if (player.getObraz().getPosition().x > 518 && player.getObraz().getPosition().x < 563 && player.getObraz().getPosition().y < 273 && player.getObraz().getPosition().y > 268)
+            {player.setPosition(player.getObraz().getPosition().x,273);}
+//C(237,452)
+        if (player.getObraz().getPosition().x > 212 && player.getObraz().getPosition().x < 217 && player.getObraz().getPosition().y > 452 && player.getObraz().getPosition().y < 522)
+            {player.setPosition(212,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 307 && player.getObraz().getPosition().x > 302 && player.getObraz().getPosition().y > 452 && player.getObraz().getPosition().y < 522)
+            {player.setPosition(307,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 237 && player.getObraz().getPosition().x < 282 && player.getObraz().getPosition().y > 427 && player.getObraz().getPosition().y < 432)
+            {player.setPosition(player.getObraz().getPosition().x,427);}
+        if (player.getObraz().getPosition().x > 237 && player.getObraz().getPosition().x < 282 && player.getObraz().getPosition().y < 522 && player.getObraz().getPosition().y > 517)
+            {player.setPosition(player.getObraz().getPosition().x,522);}
+//D(518,452)
+        if (player.getObraz().getPosition().x > 493 && player.getObraz().getPosition().x < 498 && player.getObraz().getPosition().y > 452 && player.getObraz().getPosition().y < 522)
+            {player.setPosition(493,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 588 && player.getObraz().getPosition().x > 583 && player.getObraz().getPosition().y > 452 && player.getObraz().getPosition().y < 522)
+            {player.setPosition(588,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 518 && player.getObraz().getPosition().x < 563 && player.getObraz().getPosition().y > 427 && player.getObraz().getPosition().y < 432)
+            {player.setPosition(player.getObraz().getPosition().x,427);}
+        if (player.getObraz().getPosition().x > 518 && player.getObraz().getPosition().x < 563 && player.getObraz().getPosition().y < 522 && player.getObraz().getPosition().y > 517)
+            {player.setPosition(player.getObraz().getPosition().x,522);}
+//E(377,50)
+        if (player.getObraz().getPosition().x > 352 && player.getObraz().getPosition().x < 357 && player.getObraz().getPosition().y > 50 && player.getObraz().getPosition().y < 95)
+            {player.setPosition(352,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 447 && player.getObraz().getPosition().x > 442 && player.getObraz().getPosition().y > 50 && player.getObraz().getPosition().y < 95)
+            {player.setPosition(447,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 377 && player.getObraz().getPosition().x < 422 && player.getObraz().getPosition().y > 25 && player.getObraz().getPosition().y < 30)
+            {player.setPosition(player.getObraz().getPosition().x,25);}
+        if (player.getObraz().getPosition().x > 377 && player.getObraz().getPosition().x < 422 && player.getObraz().getPosition().y < 120 && player.getObraz().getPosition().y > 115)
+            {player.setPosition(player.getObraz().getPosition().x,120);}
+//F(705,327)
+        if (player.getObraz().getPosition().x > 680 && player.getObraz().getPosition().x < 685 && player.getObraz().getPosition().y > 327 && player.getObraz().getPosition().y < 372)
+            {player.setPosition(680,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 775 && player.getObraz().getPosition().x > 750 && player.getObraz().getPosition().y > 327 && player.getObraz().getPosition().y < 372)
+            {player.setPosition(775,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 705 && player.getObraz().getPosition().x < 750 && player.getObraz().getPosition().y > 302 && player.getObraz().getPosition().y < 307)
+            {player.setPosition(player.getObraz().getPosition().x,302);}
+        if (player.getObraz().getPosition().x > 705 && player.getObraz().getPosition().x < 750 && player.getObraz().getPosition().y < 397 && player.getObraz().getPosition().y > 392)
+            {player.setPosition(player.getObraz().getPosition().x,397);}
+//G(377,605)
+        if (player.getObraz().getPosition().x > 352 && player.getObraz().getPosition().x < 357 && player.getObraz().getPosition().y > 605 && player.getObraz().getPosition().y < 650)
+            {player.setPosition(352,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 447 && player.getObraz().getPosition().x > 442 && player.getObraz().getPosition().y > 605 && player.getObraz().getPosition().y < 650)
+            {player.setPosition(447,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 377 && player.getObraz().getPosition().x < 422 && player.getObraz().getPosition().y > 580 && player.getObraz().getPosition().y < 585)
+            {player.setPosition(player.getObraz().getPosition().x,580);}
+        if (player.getObraz().getPosition().x > 377 && player.getObraz().getPosition().x < 422 && player.getObraz().getPosition().y < 675 && player.getObraz().getPosition().y > 670)
+            {player.setPosition(player.getObraz().getPosition().x,675);}
+//H(50,327)
+        if (player.getObraz().getPosition().x > 25 && player.getObraz().getPosition().x < 30 && player.getObraz().getPosition().y > 327 && player.getObraz().getPosition().y < 372)
+            {player.setPosition(25,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x < 120 && player.getObraz().getPosition().x > 115 && player.getObraz().getPosition().y > 327 && player.getObraz().getPosition().y < 372)
+            {player.setPosition(120,player.getObraz().getPosition().y);}
+        if (player.getObraz().getPosition().x > 50 && player.getObraz().getPosition().x < 95 && player.getObraz().getPosition().y > 302 && player.getObraz().getPosition().y < 307)
+            {player.setPosition(player.getObraz().getPosition().x,302);}
+        if (player.getObraz().getPosition().x > 50 && player.getObraz().getPosition().x < 95 && player.getObraz().getPosition().y < 397 && player.getObraz().getPosition().y > 392)
+            {player.setPosition(player.getObraz().getPosition().x,397);}
+
+
         okno.clear(sf::Color::White);
 
         okno.draw(player.getObraz());
