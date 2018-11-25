@@ -16,10 +16,7 @@ sf::Sprite Przeszkoda::getObraz()
     return obraz;
 }
 
-void Przeszkoda::setPosition()
+void Przeszkoda::setPosition(float x,float y)
 {
-    float x,y;
-    x=rand1;
-    y=rand2;
     obraz.setPosition(x,y);
 }

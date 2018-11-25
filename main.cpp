@@ -10,7 +10,6 @@ using namespace std;
 
 sf::Clock zegar;
 float deltatime=0;
-float rand1,rand2;
 sf::Font czcionka;
 
 int main()
@@ -21,23 +20,21 @@ int main()
     czcionka.loadFromFile("arial.ttf");
     okno.setMouseCursorVisible(false);
 
-    srand(time(NULL));
-
     Wskaznik myszka("img/celownik.png");
 
-    std::vector<Przeszkoda*> przeszk;
-
-    for (int i=0;i<5;i++)
-    {
-        rand1=rand()%700;
-        rand2=rand()%600;
-        przeszk.push_back( new Przeszkoda("img/przeszkoda.png"));
-        przeszk[i]->setPosition();
-    }
     Gracz player("img/gracz.png");
     //player.obroc(90);
 
     deltatime = zegar.restart().asSeconds();
+
+    Przeszkoda przeszkoda1("img/przeszkoda.png");
+    Przeszkoda przeszkoda2("img/przeszkoda.png");
+    Przeszkoda przeszkoda3("img/przeszkoda.png");
+    Przeszkoda przeszkoda4("img/przeszkoda.png");
+    Przeszkoda przeszkoda5("img/przeszkoda.png");
+    Przeszkoda przeszkoda6("img/przeszkoda.png");
+    Przeszkoda przeszkoda7("img/przeszkoda.png");
+    Przeszkoda przeszkoda8("img/przeszkoda.png");
 
     while (okno.isOpen())
     {
@@ -69,19 +66,31 @@ int main()
         player.drag();
 
         myszka.setPosition(sf::Mouse::getPosition(okno).x,sf::Mouse::getPosition(okno).y);
-        //przeszk.setPosition();
+
+        przeszkoda1.setPosition(237,203);
+        przeszkoda2.setPosition(518,203);
+        przeszkoda3.setPosition(237,452);
+        przeszkoda4.setPosition(518,452);
+        przeszkoda5.setPosition(377,50);
+        przeszkoda6.setPosition(705,327);
+        przeszkoda7.setPosition(377,605);
+        przeszkoda8.setPosition(50,327);
 
         player.obroc( atan2(myszka.getObraz().getPosition().y - player.getObraz().getPosition().y,
                             myszka.getObraz().getPosition().x - player.getObraz().getPosition().x )/PI*180 + 90 );
 
         okno.clear(sf::Color::White);
-        for (int j=0;j<przeszk.size();j++)
-        {
-            okno.draw(przeszk[j]->getObraz());
-        }
+
         okno.draw(player.getObraz());
         okno.draw(myszka.getObraz());
-
+        okno.draw(przeszkoda1.getObraz());
+        okno.draw(przeszkoda2.getObraz());
+        okno.draw(przeszkoda3.getObraz());
+        okno.draw(przeszkoda4.getObraz());
+        okno.draw(przeszkoda5.getObraz());
+        okno.draw(przeszkoda6.getObraz());
+        okno.draw(przeszkoda7.getObraz());
+        okno.draw(przeszkoda8.getObraz());
 
 
         okno.display();
