@@ -1,7 +1,6 @@
 #include <SFML/Graphics.hpp>
 
 extern float deltatime;
-extern float rand1, rand2;
 
 class Gracz
 {
@@ -72,6 +71,6 @@ class Przeszkoda
         Przeszkoda(std::string);
         ~Przeszkoda();
         sf::Sprite getObraz();
-        void setPosition();
+        void setPosition(float,float);
 };
 

@@ -67,3 +67,8 @@ void Gracz::obroc(float r)
 {
     obraz.setRotation(r);
 }
+
+void Gracz::setPosition(float x, float y)
+{
+    obraz.setPosition(x,y);
+}
