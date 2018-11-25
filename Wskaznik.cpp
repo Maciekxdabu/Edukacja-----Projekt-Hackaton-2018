@@ -4,7 +4,6 @@ Wskaznik::Wskaznik(std::string a)
 {
     tekstura.loadFromFile(a);
     celownik.setTexture(tekstura);
-
 }
 sf::Sprite Wskaznik::getObraz()
 {
@@ -14,7 +13,7 @@ Wskaznik::~Wskaznik()
 {
     ;
 }
-void Wskaznik::setposition(float x, float y)
+void Wskaznik::setPosition(float x, float y)
 {
     celownik.setPosition(x,y);
 }

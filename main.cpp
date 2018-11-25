@@ -9,14 +9,22 @@ using namespace std;
 
 sf::Clock zegar;
 float deltatime=0;
+float rand1,rand2;
+sf::Font czcionka;
 
 int main()
 {
     sf::RenderWindow okno(sf::VideoMode(500, 500, 32), "Projekt Edukacja");
 
+    czcionka.loadFromFile("arial.ttf");
     okno.setMouseCursorVisible(false);
 
     Wskaznik myszka("img/celownik.png");
+    Przeszkoda przeszk("img/przeszkoda.png");
+
+    srand(time(NULL));
+    rand1=rand()%400;
+    rand2=rand()%400;
 
     Gracz player("img/gracz.png");
     //player.obroc(90);
@@ -52,15 +60,17 @@ int main()
         player.porusz();
         player.drag();
 
-        myszka.setposition(sf::Mouse::getPosition(okno).x,sf::Mouse::getPosition(okno).y);
+        myszka.setPosition(sf::Mouse::getPosition(okno).x,sf::Mouse::getPosition(okno).y);
+        przeszk.setPosition();
 
         player.obroc( atan2(myszka.getObraz().getPosition().y - player.getObraz().getPosition().y,
                             myszka.getObraz().getPosition().x - player.getObraz().getPosition().x )/PI*180 + 90 );
 
         okno.clear(sf::Color::White);
 
-        okno.draw(myszka.getObraz());
+        okno.draw(przeszk.getObraz());
         okno.draw(player.getObraz());
+        okno.draw(myszka.getObraz());
 
 
 
