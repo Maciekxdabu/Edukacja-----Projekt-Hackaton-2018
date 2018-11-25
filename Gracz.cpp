@@ -51,15 +51,15 @@ void Gracz::porusz()
 {
     obraz.move(przyspieszenie.x*deltatime, przyspieszenie.y*deltatime);
 
-    if (obraz.getPosition().x < 0)
-        obraz.setPosition(0, obraz.getPosition().y);
-    else if (obraz.getPosition().x > 500 - obraz.getTextureRect().width)
-        obraz.setPosition(500 - obraz.getTextureRect().width, obraz.getPosition().y);
+    if (obraz.getPosition().x < 25)
+        obraz.setPosition(25, obraz.getPosition().y);
+    else if (obraz.getPosition().x > 525 - obraz.getTextureRect().width)
+        obraz.setPosition(525 - obraz.getTextureRect().width, obraz.getPosition().y);
 
-    if (obraz.getPosition().y < 0)
-        obraz.setPosition(obraz.getPosition().x, 0);
-    else if (obraz.getPosition().y > 500 - obraz.getTextureRect().height)
-        obraz.setPosition(obraz.getPosition().x, 500 - obraz.getTextureRect().height);
+    if (obraz.getPosition().y < 25)
+        obraz.setPosition(obraz.getPosition().x, 25);
+    else if (obraz.getPosition().y > 525 - obraz.getTextureRect().height)
+        obraz.setPosition(obraz.getPosition().x, 525 - obraz.getTextureRect().height);
 }
 
 void Gracz::obroc(float r)
