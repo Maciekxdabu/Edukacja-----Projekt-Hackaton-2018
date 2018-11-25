@@ -55,6 +55,7 @@ class Wrog
         void ruch();
         void strzal();
         void czy_trafiony();
+        void obroc(float);
 
 
 };

@@ -4,6 +4,7 @@ Wrog::Wrog(std::string a, bool czy_p, int m)
 {
     tekstura.loadFromFile(a);
     obraz.setTexture(tekstura);
+    obraz.setOrigin(25, 25);
     czy_prawda=czy_p;
 
     switch (m)
@@ -17,7 +18,7 @@ Wrog::Wrog(std::string a, bool czy_p, int m)
             punkt2.x = 400;
             punkt2.y = 442;
             kierunek.x = 0;
-            kierunek.y = 11.2;
+            kierunek.y = 50;
         }
         else
         {
@@ -25,45 +26,45 @@ Wrog::Wrog(std::string a, bool czy_p, int m)
             punkt1.y = 350;
             punkt2.x = 512;
             punkt2.y = 350;
-            kierunek.x = 11.2;
+            kierunek.x = 50;
             kierunek.y = 0;
         }
         break;
     case 1:
         obraz.setPosition(150, 150);
-        punkt1.x = 100;
-        punkt1.y = 100;
         punkt1.x = 200;
-        punkt1.y = 200;
+        punkt1.y = 100;
+        punkt2.x = 100;
+        punkt2.y = 200;
         kierunek.x = 50;
-        kierunek.y = 50;
+        kierunek.y = -50;
         break;
     case 2:
         obraz.setPosition(650, 150);
-        punkt1.x = 600;
-        punkt1.y = 200;
         punkt1.x = 700;
-        punkt1.y = 100;
+        punkt1.y = 200;
+        punkt2.x = 600;
+        punkt2.y = 100;
         kierunek.x = 50;
-        kierunek.y = -50;
+        kierunek.y = 50;
         break;
     case 3:
         obraz.setPosition(150, 550);
-        punkt1.x = 100;
-        punkt1.y = 600;
         punkt1.x = 200;
-        punkt1.y = 500;
+        punkt1.y = 600;
+        punkt2.x = 100;
+        punkt2.y = 500;
         kierunek.x = 50;
-        kierunek.y = -50;
+        kierunek.y = 50;
         break;
     case 4:
         obraz.setPosition(650, 550);
-        punkt1.x = 600;
-        punkt1.y = 500;
         punkt1.x = 700;
-        punkt1.y = 600;
+        punkt1.y = 500;
+        punkt2.x = 600;
+        punkt2.y = 600;
         kierunek.x = 50;
-        kierunek.y = 50;
+        kierunek.y = -50;
         break;
     }
 
@@ -104,4 +105,9 @@ void Wrog::ruch()
         }
         break;
     }
+}
+
+void Wrog::obroc(float r)
+{
+    obraz.setRotation(r);
 }

@@ -23,7 +23,12 @@ int main()
     Wskaznik myszka("img/celownik.png");
 
     Gracz player("img/gracz.png");
-    //player.obroc(90);
+
+    Wrog przeciwnik("img/wrog.png", true, 0);
+    Wrog przeciwnik1("img/wrog.png", false, 1);
+    Wrog przeciwnik2("img/wrog.png", false, 2);
+    Wrog przeciwnik3("img/wrog.png", false, 3);
+    Wrog przeciwnik4("img/wrog.png", false, 4);
 
     deltatime = zegar.restart().asSeconds();
 
@@ -65,6 +70,12 @@ int main()
         player.porusz();
         player.drag();
 
+        przeciwnik.ruch();
+        przeciwnik1.ruch();
+        przeciwnik2.ruch();
+        przeciwnik3.ruch();
+        przeciwnik4.ruch();
+
         myszka.setPosition(sf::Mouse::getPosition(okno).x,sf::Mouse::getPosition(okno).y);
 
         przeszkoda1.setPosition(237,203);
@@ -78,6 +89,17 @@ int main()
 
         player.obroc( atan2(myszka.getObraz().getPosition().y - player.getObraz().getPosition().y,
                             myszka.getObraz().getPosition().x - player.getObraz().getPosition().x )/PI*180 + 90 );
+
+        przeciwnik.obroc( atan2(player.getObraz().getPosition().y - przeciwnik.getObraz().getPosition().y,
+                                player.getObraz().getPosition().x - przeciwnik.getObraz().getPosition().x )/PI*180 + 90);
+        przeciwnik1.obroc( atan2(player.getObraz().getPosition().y - przeciwnik1.getObraz().getPosition().y,
+                                player.getObraz().getPosition().x - przeciwnik1.getObraz().getPosition().x )/PI*180 + 90);
+        przeciwnik2.obroc( atan2(player.getObraz().getPosition().y - przeciwnik2.getObraz().getPosition().y,
+                                player.getObraz().getPosition().x - przeciwnik2.getObraz().getPosition().x )/PI*180 + 90);
+        przeciwnik3.obroc( atan2(player.getObraz().getPosition().y - przeciwnik3.getObraz().getPosition().y,
+                                player.getObraz().getPosition().x - przeciwnik3.getObraz().getPosition().x )/PI*180 + 90);
+        przeciwnik4.obroc( atan2(player.getObraz().getPosition().y - przeciwnik4.getObraz().getPosition().y,
+                                player.getObraz().getPosition().x - przeciwnik4.getObraz().getPosition().x )/PI*180 + 90);
 
 //A(237,203)
         if (player.getObraz().getPosition().x > 212 && player.getObraz().getPosition().x < 217 && player.getObraz().getPosition().y > 203 && player.getObraz().getPosition().y < 248)
@@ -157,6 +179,11 @@ int main()
 
         okno.draw(player.getObraz());
         okno.draw(myszka.getObraz());
+        okno.draw(przeciwnik.getObraz());
+        okno.draw(przeciwnik1.getObraz());
+        okno.draw(przeciwnik2.getObraz());
+        okno.draw(przeciwnik3.getObraz());
+        okno.draw(przeciwnik4.getObraz());
         okno.draw(przeszkoda1.getObraz());
         okno.draw(przeszkoda2.getObraz());
         okno.draw(przeszkoda3.getObraz());
