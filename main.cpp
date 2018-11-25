@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <vector>
 
 #include "klasy.h"
 
@@ -20,13 +21,19 @@ int main()
     czcionka.loadFromFile("arial.ttf");
     okno.setMouseCursorVisible(false);
 
-    Wskaznik myszka("img/celownik.png");
-    Przeszkoda przeszk("img/przeszkoda.png");
-
     srand(time(NULL));
-    rand1=rand()%400;
-    rand2=rand()%400;
 
+    Wskaznik myszka("img/celownik.png");
+
+    std::vector<Przeszkoda*> przeszk;
+
+    for (int i=0;i<5;i++)
+    {
+        rand1=rand()%700;
+        rand2=rand()%600;
+        przeszk.push_back( new Przeszkoda("img/przeszkoda.png"));
+        przeszk[i]->setPosition();
+    }
     Gracz player("img/gracz.png");
     //player.obroc(90);
 
@@ -62,14 +69,16 @@ int main()
         player.drag();
 
         myszka.setPosition(sf::Mouse::getPosition(okno).x,sf::Mouse::getPosition(okno).y);
-        przeszk.setPosition();
+        //przeszk.setPosition();
 
         player.obroc( atan2(myszka.getObraz().getPosition().y - player.getObraz().getPosition().y,
                             myszka.getObraz().getPosition().x - player.getObraz().getPosition().x )/PI*180 + 90 );
 
         okno.clear(sf::Color::White);
-
-        okno.draw(przeszk.getObraz());
+        for (int j=0;j<przeszk.size();j++)
+        {
+            okno.draw(przeszk[j]->getObraz());
+        }
         okno.draw(player.getObraz());
         okno.draw(myszka.getObraz());
 
