@@ -1,16 +1,6 @@
 #include <SFML/Graphics.hpp>
 
-/*class Przycisk
-{
-protected:
-    sf::Sprite obraz;
-    sf::Texture tekstura;
-    sf::Text tekst;
-
-public:
-    Przycisk();
-    ~Przycisk();
-};*/
+extern float deltatime;
 
 class Gracz
 {
@@ -23,9 +13,11 @@ public:
     Gracz(std::string);
     ~Gracz();
     sf::Sprite getObraz();
-    void ruch(float, float);
+    void ruchx(float);
+    void ruchy(float);
     void drag();
     void porusz();
+    void obroc(float);
 };
 
 class Wskaznik
@@ -44,9 +36,6 @@ class Wskaznik
 
 class Wrog
 {
-    protected:
-
-        sf::Sprite
 
 };
 
